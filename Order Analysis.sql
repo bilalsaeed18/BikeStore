@@ -40,3 +40,11 @@ ORDER BY 1 asc
 
 
 select * from sales.order_items
+
+
+SELECT *
+FROM  sales.orders
+
+
+SELECT COUNT(customer_id) AS 'Total Orders'
+FROM  sales.orders
