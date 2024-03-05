@@ -46,5 +46,9 @@ SELECT *
 FROM  sales.orders
 
 
-SELECT COUNT(customer_id) AS 'Total Orders'
+SELECt COUNT(Distinct customer_id) AS 'Total Orders'
+FROM  sales.orders
+
+
+SELECT COUNT(order_id) AS 'Total Orders'
 FROM  sales.orders
