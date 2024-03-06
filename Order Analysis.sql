@@ -59,3 +59,7 @@ FROM [production].[products]
 
 SELECT count(product_id) as 'Total Product'
 FROM [production].[products]
+
+
+SELECT count(brand_id) as 'Total Brands'
+FROM  [production].[brands]
