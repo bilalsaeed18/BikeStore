@@ -52,3 +52,10 @@ FROM  sales.orders
 
 SELECT COUNT(order_id) AS 'Total Orders'
 FROM  sales.orders
+
+
+SELECT *
+FROM [production].[products]
+
+SELECT count(product_id) as 'Total Product'
+FROM [production].[products]
