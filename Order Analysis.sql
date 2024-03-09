@@ -63,3 +63,18 @@ FROM [production].[products]
 
 SELECT count(brand_id) as 'Total Brands'
 FROM  [production].[brands]
+
+SELECT *
+FROM [sales].[stores]
+
+
+SELECT *
+FROM [sales].[staffs]
+
+
+SELECT count(store_id) as 'Total Stores'
+FROM [sales].[stores]
+
+
+SELECT COUNT (staff_id) as 'Total Staff'
+FROM [sales].[staffs]
