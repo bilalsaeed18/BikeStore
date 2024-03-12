@@ -78,3 +78,6 @@ FROM [sales].[stores]
 
 SELECT COUNT (staff_id) as 'Total Staff'
 FROM [sales].[staffs]
+
+
+select SUM(quantity * list_price) AS 'Revenue' from  sales.order_items
