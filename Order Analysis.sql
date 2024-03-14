@@ -127,3 +127,26 @@ GROUP BY
 		cus.city
 ORDER BY 1 desc
 
+
+
+-- State  wise  orders
+SELECT	
+		count(ord.order_id) as 'Orders',	
+		cus.state
+FROM sales.orders ord
+JOIN sales.customers cus
+ON ord.customer_id =  cus.customer_id
+JOIN sales.order_items it
+ON ord.order_id = it.order_id
+JOIN production.products pp 
+ON it.product_id = pp.product_id
+JOIN production.categories cat 
+ON pp.category_id = cat.category_id
+JOIN sales.stores ss
+ON ss.store_id = ord.store_id
+JOIN sales.staffs sals
+ON sals.staff_id = ord.staff_id
+GROUP BY  
+cus.state
+ORDER BY 1 desc
+
