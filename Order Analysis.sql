@@ -81,3 +81,25 @@ FROM [sales].[staffs]
 
 
 select SUM(quantity * list_price) AS 'Revenue' from  sales.order_items
+
+
+-- Store wise orders
+SELECT	
+		count(ord.order_id) as 'Orders',	
+		ss.store_name
+FROM sales.orders ord
+JOIN sales.customers cus
+ON ord.customer_id =  cus.customer_id
+JOIN sales.order_items it
+ON ord.order_id = it.order_id
+JOIN production.products pp 
+ON it.product_id = pp.product_id
+JOIN production.categories cat 
+ON pp.category_id = cat.category_id
+JOIN sales.stores ss
+ON ss.store_id = ord.store_id
+JOIN sales.staffs sals
+ON sals.staff_id = ord.staff_id
+GROUP BY  
+		ss.store_name
+ORDER BY 1 desc
