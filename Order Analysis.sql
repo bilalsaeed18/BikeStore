@@ -150,3 +150,6 @@ GROUP BY
 cus.state
 ORDER BY 1 desc
 
+
+SELECT *
+FROM sales.staffs
