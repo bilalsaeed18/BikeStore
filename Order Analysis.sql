@@ -153,3 +153,6 @@ ORDER BY 1 desc
 
 SELECT *
 FROM sales.staffs
+
+SELECT *
+FROM [production].[brands]
