@@ -156,3 +156,11 @@ FROM sales.staffs
 
 SELECT *
 FROM [production].[brands]
+
+
+SELECT *
+FROM [production].[stocks]
+
+
+SELECT *
+FROM [sales].[customers]
